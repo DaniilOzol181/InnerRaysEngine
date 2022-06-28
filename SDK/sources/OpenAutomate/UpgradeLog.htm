@@ -1,0 +1,373 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+ <html xmlns:msxsl="urn:schemas-microsoft-com:xslt"><head><meta content="en-us" http-equiv="Content-Language" /><meta content="text/html; charset=utf-16" http-equiv="Content-Type" /><title _locID="ConversionReport0">
+          Migration Report
+        </title><style> 
+                    /* Body style, for the entire document */
+                    body
+                    {
+                        background: #F3F3F4;
+                        color: #1E1E1F;
+                        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+                        padding: 0;
+                        margin: 0;
+                    }
+
+                    /* Header1 style, used for the main title */
+                    h1
+                    {
+                        padding: 10px 0px 10px 10px;
+                        font-size: 21pt;
+                        background-color: #E2E2E2;
+                        border-bottom: 1px #C1C1C2 solid; 
+                        color: #201F20;
+                        margin: 0;
+                        font-weight: normal;
+                    }
+
+                    /* Header2 style, used for "Overview" and other sections */
+                    h2
+                    {
+                        font-size: 18pt;
+                        font-weight: normal;
+                        padding: 15px 0 5px 0;
+                        margin: 0;
+                    }
+
+                    /* Header3 style, used for sub-sections, such as project name */
+                    h3
+                    {
+                        font-weight: normal;
+                        font-size: 15pt;
+                        margin: 0;
+                        padding: 15px 0 5px 0;
+                        background-color: transparent;
+                    }
+
+                    /* Color all hyperlinks one color */
+                    a
+                    {
+                        color: #1382CE;
+                    }
+
+                    /* Table styles */ 
+                    table
+                    {
+                        border-spacing: 0 0;
+                        border-collapse: collapse;
+                        font-size: 10pt;
+                    }
+
+                    table th
+                    {
+                        background: #E7E7E8;
+                        text-align: left;
+                        text-decoration: none;
+                        font-weight: normal;
+                        padding: 3px 6px 3px 6px;
+                    }
+
+                    table td
+                    {
+                        vertical-align: top;
+                        padding: 3px 6px 5px 5px;
+                        margin: 0px;
+                        border: 1px solid #E7E7E8;
+                        background: #F7F7F8;
+                    }
+
+                    /* Local link is a style for hyperlinks that link to file:/// content, there are lots so color them as 'normal' text until the user mouse overs */
+                    .localLink
+                    {
+                        color: #1E1E1F;
+                        background: #EEEEED;
+                        text-decoration: none;
+                    }
+
+                    .localLink:hover
+                    {
+                        color: #1382CE;
+                        background: #FFFF99;
+                        text-decoration: none;
+                    }
+
+                    /* Center text, used in the over views cells that contain message level counts */ 
+                    .textCentered
+                    {
+                        text-align: center;
+                    }
+
+                    /* The message cells in message tables should take up all avaliable space */
+                    .messageCell
+                    {
+                        width: 100%;
+                    }
+
+                    /* Padding around the content after the h1 */ 
+                    #content 
+                    {
+	                    padding: 0px 12px 12px 12px; 
+                    }
+
+                    /* The overview table expands to width, with a max width of 97% */ 
+                    #overview table
+                    {
+                        width: auto;
+                        max-width: 75%; 
+                    }
+
+                    /* The messages tables are always 97% width */
+                    #messages table
+                    {
+                        width: 97%;
+                    }
+
+                    /* All Icons */
+                    .IconSuccessEncoded, .IconInfoEncoded, .IconWarningEncoded, .IconErrorEncoded
+                    {
+                        min-width:18px;
+                        min-height:18px; 
+                        background-repeat:no-repeat;
+                        background-position:center;
+                    }
+
+                    /* Success icon encoded */
+                    .IconSuccessEncoded
+                    {
+                        /* Note: Do not delete the comment below. It is used to verify the correctness of the encoded image resource below before the product is released */
+                        /* [---XsltValidateInternal-Base64EncodedImage:IconSuccess#Begin#background-image: url(data:image/png;base64,#Separator#);#End#] */
+                        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABcElEQVR4Xq2TsUsCURzHv15g8ZJcBWlyiYYgCIWcb9DFRRwMW5TA2c0/QEFwFkxxUQdxVlBwCYWOi6IhWgQhBLHJUCkhLr/BW8S7gvrAg+N+v8/v+x68Z8MGy+XSCyABQAXgBgHGALoASkIIDWSLeLBetdHryMjd5IxQPWT4rn1c/P7+xxp72Cs9m5SZ0Bq2vPnbPFafK2zDvmNHypdC0BPkLlQhxJsCAhQoZwdZU5mwxh720qGo8MzTxTTKZDPCx2HoVzp6lz0Q9tKhyx0kGs8Ny+TkWRKk8lCROwEduhyg9l/6lunOPSfmH3NUH6uQ0KHLAe7JYvJjevm+DAMGJHToKtigE+vwvIidxLamb8IBY9e+C5LiXREkfho3TSd06HJA13/oh6T51MTsfQbHrsMynQ5dDihFjiK8JJAU9AKIWTp76dCVN7HWHrajmUEGvyF9nkbAE6gLIS7kTUyuf2gscLoJrElZo/Mvj+nPz/kLTmfnEwP3tB0AAAAASUVORK5CYII=);
+                    }
+
+                    /* Information icon encoded */
+                    .IconInfoEncoded
+                    {
+                        /* Note: Do not delete the comment below. It is used to verify the correctness of the encoded image resource below before the product is released */
+                        /* [---XsltValidateInternal-Base64EncodedImage:IconInformation#Begin#background-image: url(data:image/png;base64,#Separator#);#End#] */
+                        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHElEQVR4Xs2TsUoDQRRF7wwoziokjZUKadInhdhukR9YP8DMX1hYW+QvdsXa/QHBbcXC7W0CamWTQnclFutceIQJwwaWNLlwm5k5d94M76mmaeCrrmsLYOocY12FcxZFUeozCqKqqgYA8uevv1H6VuPxcwlfk5N92KHBxfFeCSAxxswlYAW/Xr989x/mv9gkhtyMDhcAxgzRsp7flj8B/HF1RsMXq+NZMkopaHe7lbKxQUEIGbKsYNoGn969060hZBkQex/W8oRQwsQaW2o3Ago2SVcJUzAgY3N0lTCZZm+zPS8HB51gMmS1DEYyOz9acKO1D8JWTlafKIMxdhvlfdyT94Vv5h7P8Ky7nQzACmhvKq3zk3PjW9asz9D/1oigecsioooAAAAASUVORK5CYII=);
+                    }
+
+                    /* Warning icon encoded */
+                    .IconWarningEncoded
+                    {
+                        /* Note: Do not delete the comment below. It is used to verify the correctness of the encoded image resource below before the product is released */
+                        /* [---XsltValidateInternal-Base64EncodedImage:IconWarning#Begin#background-image: url(data:image/png;base64,#Separator#);#End#] */
+                        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAx0lEQVR4XpWSMQ7CMAxFf4xAyBMLCxMrO8dhaBcuwdCJS3RJBw7SA/QGTCxdWJgiQYWKXJWKIXHIlyw5lqr34tQgEOdcBsCOx5yZK3hCCKdYXneQkh4pEfqzLfu+wVDSyyzFoJjfz9NB+pAF+eizx2Vruts0k15mPgvS6GYvpVtQhB61IB/dk6AF6fS4Ben0uIX5odtFe8Q/eW1KvFeH4e8khT6+gm5B+t3juyDt7n0jpe+CANTd+oTUjN/U3yVaABnSUjFz/gFq44JaVSCXeQAAAABJRU5ErkJggg==);
+                    }
+
+                    /* Error icon encoded */
+                    .IconErrorEncoded
+                    {
+                        /* Note: Do not delete the comment below. It is used to verify the correctness of the encoded image resource below before the product is released */
+                        /* [---XsltValidateInternal-Base64EncodedImage:IconError#Begin#background-image: url(data:image/png;base64,#Separator#);#End#] */
+                        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABQElEQVR4XqWTvUoEQRCE6wYPZUA80AfwAQz23uCMjA7MDRQEIzPBVEyNTQUFIw00vcQTTMzuAh/AxEQQT8HF/3G/oGGnEUGuoNnd6qoZuqltyKEsyzVJq5I6rnUp6SjGeGhESikzzlc1eL7opfuVbrqbU1Zw9NCgtQMaZpY0eNnaaL2fHusvTK5vKu7sjSS1Y4y3QUA6K3e3Mau5UFDyMP7tYF9o8cAHZv68vipoIJg971PZIZ5HiwdvYGGvFVFHmGmZ2MxwmQYPXubPl9Up0tfoMQGetXd6mRbvhBw+boZ6WF7Mbv1+GsHRk0fQmPAH1GfmZirbCfDJ61tw3Px8/8pZsPAG4jlVhcPgZ7adwNWBB68lkRQWFiTgFlbnLY3DGGM7izIJIyT/jjIvEJw6fdJTc6krDzh6aMwMP9bvDH4ADSsa9uSWVJkAAAAASUVORK5CYII=);
+                    }
+                 </style><script type="text/javascript" language="javascript"> 
+          
+            // Startup 
+            // Hook up the the loaded event for the document/window, to linkify the document content
+            var startupFunction = function() { linkifyElement("messages"); };
+            
+            if(window.attachEvent)
+            {
+              window.attachEvent('onload', startupFunction);
+            }
+            else if (window.addEventListener) 
+            {
+              window.addEventListener('load', startupFunction, false);
+            }
+            else 
+            {
+              document.addEventListener('load', startupFunction, false);
+            } 
+            
+            // Toggles the visibility of table rows with the specified name 
+            function toggleTableRowsByName(name)
+            {
+               var allRows = document.getElementsByTagName('tr');
+               for (i=0; i < allRows.length; i++)
+               {
+                  var currentName = allRows[i].getAttribute('name');
+                  if(!!currentName && currentName.indexOf(name) == 0)
+                  {
+                      var isVisible = allRows[i].style.display == ''; 
+                      isVisible ? allRows[i].style.display = 'none' : allRows[i].style.display = '';
+                  }
+               }
+            }
+            
+            function scrollToFirstVisibleRow(name) 
+            {
+               var allRows = document.getElementsByTagName('tr');
+               for (i=0; i < allRows.length; i++)
+               {
+                  var currentName = allRows[i].getAttribute('name');
+                  var isVisible = allRows[i].style.display == ''; 
+                  if(!!currentName && currentName.indexOf(name) == 0 && isVisible)
+                  {
+                     allRows[i].scrollIntoView(true); 
+                     return true; 
+                  }
+               }
+               
+               return false;
+            }
+            
+            // Linkifies the specified text content, replaces candidate links with html links 
+            function linkify(text)
+            {
+                 if(!text || 0 === text.length)
+                 {
+                     return text; 
+                 }
+
+                 // Find http, https and ftp links and replace them with hyper links 
+                 var urlLink = /(http|https|ftp)\:\/\/[a-zA-Z0-9\-\.]+(:[a-zA-Z0-9]*)?\/?([a-zA-Z0-9\-\._\?\,\/\\\+&%\$#\=~;\{\}])*/gi;
+                 
+                 return text.replace(urlLink, '<a href="$&">$&</a>') ;
+            }
+            
+            // Linkifies the specified element by ID
+            function linkifyElement(id)
+            {
+                var element = document.getElementById(id);
+                if(!!element)
+                {
+                  element.innerHTML = linkify(element.innerHTML); 
+                }
+            }
+            
+            function ToggleMessageVisibility(projectName)
+            {
+              if(!projectName || 0 === projectName.length)
+              {
+                return; 
+              }
+              
+              toggleTableRowsByName("MessageRowClass" + projectName);
+              toggleTableRowsByName('MessageRowHeaderShow' + projectName);
+              toggleTableRowsByName('MessageRowHeaderHide' + projectName); 
+            }
+            
+            function ScrollToFirstVisibleMessage(projectName)
+            {
+              if(!projectName || 0 === projectName.length)
+              {
+                return; 
+              }
+              
+              // First try the 'Show messages' row
+              if(!scrollToFirstVisibleRow('MessageRowHeaderShow' + projectName))
+              {
+                // Failed to find a visible row for 'Show messages', try an actual message row 
+                scrollToFirstVisibleRow('MessageRowClass' + projectName); 
+              }
+            }
+           </script></head><body><h1 _locID="ConversionReport">
+          Migration Report - OpenAutomate</h1><div id="content"><h2 _locID="OverviewTitle">Overview</h2><div id="overview"><table><tr><th></th><th _locID="ProjectTableHeader">Project</th><th _locID="PathTableHeader">Path</th><th _locID="ErrorsTableHeader">Errors</th><th _locID="WarningsTableHeader">Warnings</th><th _locID="MessagesTableHeader">Messages</th></tr><tr><td class="IconWarningEncoded" /><td><strong><a href="#oainfo_plugin">oainfo_plugin</a></strong></td><td>plugins\oainfo_plugin\oainfo_plugin.vcproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#oainfo_pluginWarning">4</a></td><td class="textCentered"><a href="#" onclick="ScrollToFirstVisibleMessage('oainfo_plugin'); return false;">3</a></td></tr><tr><td class="IconWarningEncoded" /><td><strong><a href="#oalib">oalib</a></strong></td><td>oalib\oalib.vcproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#oalibWarning">4</a></td><td class="textCentered"><a href="#" onclick="ScrollToFirstVisibleMessage('oalib'); return false;">2</a></td></tr><tr><td class="IconWarningEncoded" /><td><strong><a href="#oaremote">oaremote</a></strong></td><td>oarpc\oaremote\oaremote.vcproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#oaremoteWarning">4</a></td><td class="textCentered"><a href="#" onclick="ScrollToFirstVisibleMessage('oaremote'); return false;">3</a></td></tr><tr><td class="IconWarningEncoded" /><td><strong><a href="#oaremote_plugin">oaremote_plugin</a></strong></td><td>oarpc\oaremote_plugin\oaremote_plugin.vcproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#oaremote_pluginWarning">4</a></td><td class="textCentered"><a href="#" onclick="ScrollToFirstVisibleMessage('oaremote_plugin'); return false;">3</a></td></tr><tr><td class="IconWarningEncoded" /><td><strong><a href="#oarpclib">oarpclib</a></strong></td><td>oarpc\oarpclib\oarpclib.vcproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#oarpclibWarning">4</a></td><td class="textCentered"><a href="#" onclick="ScrollToFirstVisibleMessage('oarpclib'); return false;">2</a></td></tr><tr><td class="IconWarningEncoded" /><td><strong><a href="#oatest">oatest</a></strong></td><td>oatest</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#oatestWarning">4</a></td><td class="textCentered"><a href="#" onclick="ScrollToFirstVisibleMessage('oatest'); return false;">3</a></td></tr><tr><td class="IconWarningEncoded" /><td><strong><a href="#oatestlib">oatestlib</a></strong></td><td>oatest\oatestlib.vcproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#oatestlibWarning">4</a></td><td class="textCentered"><a href="#" onclick="ScrollToFirstVisibleMessage('oatestlib'); return false;">2</a></td></tr><tr><td class="IconWarningEncoded" /><td><strong><a href="#simple_app">simple_app</a></strong></td><td>examples\simple_app\simple_app.vcproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#simple_appWarning">4</a></td><td class="textCentered"><a href="#" onclick="ScrollToFirstVisibleMessage('simple_app'); return false;">3</a></td></tr><tr><td class="IconWarningEncoded" /><td><strong><a href="#simple_plugin">simple_plugin</a></strong></td><td>examples\simple_plugin\simple_plugin.vcproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#simple_pluginWarning">4</a></td><td class="textCentered"><a href="#" onclick="ScrollToFirstVisibleMessage('simple_plugin'); return false;">3</a></td></tr><tr><td class="IconWarningEncoded" /><td><strong><a href="#Solution"><span _locID="OverviewSolutionSpan">Solution</span></a></strong></td><td>OpenAutomate.sln</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#SolutionWarning">1</a></td><td class="textCentered"><a href="#" onclick="ScrollToFirstVisibleMessage('Solution'); return false;">2</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#oarpc">oarpc</a></strong></td><td>oarpc</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#plugins">plugins</a></strong></td><td>plugins</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#Simple examples">Simple examples</a></strong></td><td>Simple examples</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr></table></div><h2 _locID="SolutionAndProjectsTitle">Solution and projects</h2><div id="messages"><a name="oainfo_plugin" /><h3>oainfo_plugin</h3><table><tr id="oainfo_pluginHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="WarningRowClassoainfo_plugin"><td class="IconWarningEncoded"><a name="oainfo_pluginWarning" /></td><td class="messageCell"><strong>plugins\oainfo_plugin\oainfo_plugin.vcproj:
+        </strong><span>This application has been updated to include settings related to the User Account Control (UAC) feature of Windows Vista. By default, when run on Windows Vista with UAC enabled, this application is marked to run with the same privileges as the process that launched it. This marking also disables the application from running with virtualization. You can change UAC related settings from the Property Pages of the project.</span></td></tr><tr name="WarningRowClassoainfo_plugin"><td class="IconWarningEncoded"><a name="oainfo_pluginWarning" /></td><td class="messageCell"><strong>plugins\oainfo_plugin\oainfo_plugin.vcproj:
+        </strong><span>VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.</span></td></tr><tr name="WarningRowClassoainfo_plugin"><td class="IconWarningEncoded"><a name="oainfo_pluginWarning" /></td><td class="messageCell"><strong>plugins\oainfo_plugin\oainfo_plugin.vcproj:
+        </strong><span>Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.</span></td></tr><tr name="WarningRowClassoainfo_plugin"><td class="IconWarningEncoded"><a name="oainfo_pluginWarning" /></td><td class="messageCell"><strong>plugins\oainfo_plugin\oainfo_plugin.vcproj:
+        </strong><span>Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.</span></td></tr><tr name="MessageRowHeaderShowoainfo_plugin"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="ShowAdditionalMessages" href="#" name="oainfo_pluginMessage" onclick="ToggleMessageVisibility('oainfo_plugin'); return false;">
+          Show 3 additional messages
+        </a></td></tr><tr name="MessageRowClassoainfo_plugin" style="display: none"><td class="IconInfoEncoded"><a name="oainfo_pluginMessage" /></td><td class="messageCell"><strong>plugins\oainfo_plugin\oainfo_plugin.vcproj:
+        </strong><span>Converting project file 'G:\GameDevelopment\XRayEngine\InnerRaysEngine\InnerRaysEngine\SDK\sources\OpenAutomate\plugins\oainfo_plugin\oainfo_plugin.vcproj'.</span></td></tr><tr name="MessageRowClassoainfo_plugin" style="display: none"><td class="IconInfoEncoded"><a name="oainfo_pluginMessage" /></td><td class="messageCell"><strong>plugins\oainfo_plugin\oainfo_plugin.vcproj:
+        </strong><span>Web deployment to the local IIS server is no longer supported. The Web Deployment build tool has been removed from your project settings.</span></td></tr><tr name="MessageRowClassoainfo_plugin" style="display: none"><td class="IconInfoEncoded"><a name="oainfo_pluginMessage" /></td><td class="messageCell"><strong>plugins\oainfo_plugin\oainfo_plugin.vcproj:
+        </strong><span>Done converting to new project file 'G:\GameDevelopment\XRayEngine\InnerRaysEngine\InnerRaysEngine\SDK\sources\OpenAutomate\plugins\oainfo_plugin\oainfo_plugin.vcxproj'.</span></td></tr><tr style="display: none" name="MessageRowHeaderHideoainfo_plugin"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="HideAdditionalMessages" href="#" name="oainfo_pluginMessage" onclick="ToggleMessageVisibility('oainfo_plugin'); return false;">
+          Hide 3 additional messages
+        </a></td></tr></table><a name="oalib" /><h3>oalib</h3><table><tr id="oalibHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="WarningRowClassoalib"><td class="IconWarningEncoded"><a name="oalibWarning" /></td><td class="messageCell"><strong>oalib\oalib.vcproj:
+        </strong><span>This application has been updated to include settings related to the User Account Control (UAC) feature of Windows Vista. By default, when run on Windows Vista with UAC enabled, this application is marked to run with the same privileges as the process that launched it. This marking also disables the application from running with virtualization. You can change UAC related settings from the Property Pages of the project.</span></td></tr><tr name="WarningRowClassoalib"><td class="IconWarningEncoded"><a name="oalibWarning" /></td><td class="messageCell"><strong>oalib\oalib.vcproj:
+        </strong><span>VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.</span></td></tr><tr name="WarningRowClassoalib"><td class="IconWarningEncoded"><a name="oalibWarning" /></td><td class="messageCell"><strong>oalib\oalib.vcproj:
+        </strong><span>Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.</span></td></tr><tr name="WarningRowClassoalib"><td class="IconWarningEncoded"><a name="oalibWarning" /></td><td class="messageCell"><strong>oalib\oalib.vcproj:
+        </strong><span>Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.</span></td></tr><tr name="MessageRowHeaderShowoalib"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="ShowAdditionalMessages" href="#" name="oalibMessage" onclick="ToggleMessageVisibility('oalib'); return false;">
+          Show 2 additional messages
+        </a></td></tr><tr name="MessageRowClassoalib" style="display: none"><td class="IconInfoEncoded"><a name="oalibMessage" /></td><td class="messageCell"><strong>oalib\oalib.vcproj:
+        </strong><span>Converting project file 'G:\GameDevelopment\XRayEngine\InnerRaysEngine\InnerRaysEngine\SDK\sources\OpenAutomate\oalib\oalib.vcproj'.</span></td></tr><tr name="MessageRowClassoalib" style="display: none"><td class="IconInfoEncoded"><a name="oalibMessage" /></td><td class="messageCell"><strong>oalib\oalib.vcproj:
+        </strong><span>Done converting to new project file 'G:\GameDevelopment\XRayEngine\InnerRaysEngine\InnerRaysEngine\SDK\sources\OpenAutomate\oalib\oalib.vcxproj'.</span></td></tr><tr style="display: none" name="MessageRowHeaderHideoalib"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="HideAdditionalMessages" href="#" name="oalibMessage" onclick="ToggleMessageVisibility('oalib'); return false;">
+          Hide 2 additional messages
+        </a></td></tr></table><a name="oaremote" /><h3>oaremote</h3><table><tr id="oaremoteHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="WarningRowClassoaremote"><td class="IconWarningEncoded"><a name="oaremoteWarning" /></td><td class="messageCell"><strong>oarpc\oaremote\oaremote.vcproj:
+        </strong><span>This application has been updated to include settings related to the User Account Control (UAC) feature of Windows Vista. By default, when run on Windows Vista with UAC enabled, this application is marked to run with the same privileges as the process that launched it. This marking also disables the application from running with virtualization. You can change UAC related settings from the Property Pages of the project.</span></td></tr><tr name="WarningRowClassoaremote"><td class="IconWarningEncoded"><a name="oaremoteWarning" /></td><td class="messageCell"><strong>oarpc\oaremote\oaremote.vcproj:
+        </strong><span>VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.</span></td></tr><tr name="WarningRowClassoaremote"><td class="IconWarningEncoded"><a name="oaremoteWarning" /></td><td class="messageCell"><strong>oarpc\oaremote\oaremote.vcproj:
+        </strong><span>Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.</span></td></tr><tr name="WarningRowClassoaremote"><td class="IconWarningEncoded"><a name="oaremoteWarning" /></td><td class="messageCell"><strong>oarpc\oaremote\oaremote.vcproj:
+        </strong><span>Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.</span></td></tr><tr name="MessageRowHeaderShowoaremote"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="ShowAdditionalMessages" href="#" name="oaremoteMessage" onclick="ToggleMessageVisibility('oaremote'); return false;">
+          Show 3 additional messages
+        </a></td></tr><tr name="MessageRowClassoaremote" style="display: none"><td class="IconInfoEncoded"><a name="oaremoteMessage" /></td><td class="messageCell"><strong>oarpc\oaremote\oaremote.vcproj:
+        </strong><span>Converting project file 'G:\GameDevelopment\XRayEngine\InnerRaysEngine\InnerRaysEngine\SDK\sources\OpenAutomate\oarpc\oaremote\oaremote.vcproj'.</span></td></tr><tr name="MessageRowClassoaremote" style="display: none"><td class="IconInfoEncoded"><a name="oaremoteMessage" /></td><td class="messageCell"><strong>oarpc\oaremote\oaremote.vcproj:
+        </strong><span>Web deployment to the local IIS server is no longer supported. The Web Deployment build tool has been removed from your project settings.</span></td></tr><tr name="MessageRowClassoaremote" style="display: none"><td class="IconInfoEncoded"><a name="oaremoteMessage" /></td><td class="messageCell"><strong>oarpc\oaremote\oaremote.vcproj:
+        </strong><span>Done converting to new project file 'G:\GameDevelopment\XRayEngine\InnerRaysEngine\InnerRaysEngine\SDK\sources\OpenAutomate\oarpc\oaremote\oaremote.vcxproj'.</span></td></tr><tr style="display: none" name="MessageRowHeaderHideoaremote"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="HideAdditionalMessages" href="#" name="oaremoteMessage" onclick="ToggleMessageVisibility('oaremote'); return false;">
+          Hide 3 additional messages
+        </a></td></tr></table><a name="oaremote_plugin" /><h3>oaremote_plugin</h3><table><tr id="oaremote_pluginHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="WarningRowClassoaremote_plugin"><td class="IconWarningEncoded"><a name="oaremote_pluginWarning" /></td><td class="messageCell"><strong>oarpc\oaremote_plugin\oaremote_plugin.vcproj:
+        </strong><span>This application has been updated to include settings related to the User Account Control (UAC) feature of Windows Vista. By default, when run on Windows Vista with UAC enabled, this application is marked to run with the same privileges as the process that launched it. This marking also disables the application from running with virtualization. You can change UAC related settings from the Property Pages of the project.</span></td></tr><tr name="WarningRowClassoaremote_plugin"><td class="IconWarningEncoded"><a name="oaremote_pluginWarning" /></td><td class="messageCell"><strong>oarpc\oaremote_plugin\oaremote_plugin.vcproj:
+        </strong><span>VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.</span></td></tr><tr name="WarningRowClassoaremote_plugin"><td class="IconWarningEncoded"><a name="oaremote_pluginWarning" /></td><td class="messageCell"><strong>oarpc\oaremote_plugin\oaremote_plugin.vcproj:
+        </strong><span>Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.</span></td></tr><tr name="WarningRowClassoaremote_plugin"><td class="IconWarningEncoded"><a name="oaremote_pluginWarning" /></td><td class="messageCell"><strong>oarpc\oaremote_plugin\oaremote_plugin.vcproj:
+        </strong><span>Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.</span></td></tr><tr name="MessageRowHeaderShowoaremote_plugin"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="ShowAdditionalMessages" href="#" name="oaremote_pluginMessage" onclick="ToggleMessageVisibility('oaremote_plugin'); return false;">
+          Show 3 additional messages
+        </a></td></tr><tr name="MessageRowClassoaremote_plugin" style="display: none"><td class="IconInfoEncoded"><a name="oaremote_pluginMessage" /></td><td class="messageCell"><strong>oarpc\oaremote_plugin\oaremote_plugin.vcproj:
+        </strong><span>Converting project file 'G:\GameDevelopment\XRayEngine\InnerRaysEngine\InnerRaysEngine\SDK\sources\OpenAutomate\oarpc\oaremote_plugin\oaremote_plugin.vcproj'.</span></td></tr><tr name="MessageRowClassoaremote_plugin" style="display: none"><td class="IconInfoEncoded"><a name="oaremote_pluginMessage" /></td><td class="messageCell"><strong>oarpc\oaremote_plugin\oaremote_plugin.vcproj:
+        </strong><span>Web deployment to the local IIS server is no longer supported. The Web Deployment build tool has been removed from your project settings.</span></td></tr><tr name="MessageRowClassoaremote_plugin" style="display: none"><td class="IconInfoEncoded"><a name="oaremote_pluginMessage" /></td><td class="messageCell"><strong>oarpc\oaremote_plugin\oaremote_plugin.vcproj:
+        </strong><span>Done converting to new project file 'G:\GameDevelopment\XRayEngine\InnerRaysEngine\InnerRaysEngine\SDK\sources\OpenAutomate\oarpc\oaremote_plugin\oaremote_plugin.vcxproj'.</span></td></tr><tr style="display: none" name="MessageRowHeaderHideoaremote_plugin"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="HideAdditionalMessages" href="#" name="oaremote_pluginMessage" onclick="ToggleMessageVisibility('oaremote_plugin'); return false;">
+          Hide 3 additional messages
+        </a></td></tr></table><a name="oarpclib" /><h3>oarpclib</h3><table><tr id="oarpclibHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="WarningRowClassoarpclib"><td class="IconWarningEncoded"><a name="oarpclibWarning" /></td><td class="messageCell"><strong>oarpc\oarpclib\oarpclib.vcproj:
+        </strong><span>This application has been updated to include settings related to the User Account Control (UAC) feature of Windows Vista. By default, when run on Windows Vista with UAC enabled, this application is marked to run with the same privileges as the process that launched it. This marking also disables the application from running with virtualization. You can change UAC related settings from the Property Pages of the project.</span></td></tr><tr name="WarningRowClassoarpclib"><td class="IconWarningEncoded"><a name="oarpclibWarning" /></td><td class="messageCell"><strong>oarpc\oarpclib\oarpclib.vcproj:
+        </strong><span>VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.</span></td></tr><tr name="WarningRowClassoarpclib"><td class="IconWarningEncoded"><a name="oarpclibWarning" /></td><td class="messageCell"><strong>oarpc\oarpclib\oarpclib.vcproj:
+        </strong><span>Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.</span></td></tr><tr name="WarningRowClassoarpclib"><td class="IconWarningEncoded"><a name="oarpclibWarning" /></td><td class="messageCell"><strong>oarpc\oarpclib\oarpclib.vcproj:
+        </strong><span>Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.</span></td></tr><tr name="MessageRowHeaderShowoarpclib"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="ShowAdditionalMessages" href="#" name="oarpclibMessage" onclick="ToggleMessageVisibility('oarpclib'); return false;">
+          Show 2 additional messages
+        </a></td></tr><tr name="MessageRowClassoarpclib" style="display: none"><td class="IconInfoEncoded"><a name="oarpclibMessage" /></td><td class="messageCell"><strong>oarpc\oarpclib\oarpclib.vcproj:
+        </strong><span>Converting project file 'G:\GameDevelopment\XRayEngine\InnerRaysEngine\InnerRaysEngine\SDK\sources\OpenAutomate\oarpc\oarpclib\oarpclib.vcproj'.</span></td></tr><tr name="MessageRowClassoarpclib" style="display: none"><td class="IconInfoEncoded"><a name="oarpclibMessage" /></td><td class="messageCell"><strong>oarpc\oarpclib\oarpclib.vcproj:
+        </strong><span>Done converting to new project file 'G:\GameDevelopment\XRayEngine\InnerRaysEngine\InnerRaysEngine\SDK\sources\OpenAutomate\oarpc\oarpclib\oarpclib.vcxproj'.</span></td></tr><tr style="display: none" name="MessageRowHeaderHideoarpclib"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="HideAdditionalMessages" href="#" name="oarpclibMessage" onclick="ToggleMessageVisibility('oarpclib'); return false;">
+          Hide 2 additional messages
+        </a></td></tr></table><a name="oatest" /><h3>oatest</h3><table><tr id="oatestHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="WarningRowClassoatest"><td class="IconWarningEncoded"><a name="oatestWarning" /></td><td class="messageCell"><strong>oatest\oatest\oatest.vcproj:
+        </strong><span>This application has been updated to include settings related to the User Account Control (UAC) feature of Windows Vista. By default, when run on Windows Vista with UAC enabled, this application is marked to run with the same privileges as the process that launched it. This marking also disables the application from running with virtualization. You can change UAC related settings from the Property Pages of the project.</span></td></tr><tr name="WarningRowClassoatest"><td class="IconWarningEncoded"><a name="oatestWarning" /></td><td class="messageCell"><strong>oatest\oatest\oatest.vcproj:
+        </strong><span>VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.</span></td></tr><tr name="WarningRowClassoatest"><td class="IconWarningEncoded"><a name="oatestWarning" /></td><td class="messageCell"><strong>oatest\oatest\oatest.vcproj:
+        </strong><span>Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.</span></td></tr><tr name="WarningRowClassoatest"><td class="IconWarningEncoded"><a name="oatestWarning" /></td><td class="messageCell"><strong>oatest\oatest\oatest.vcproj:
+        </strong><span>Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.</span></td></tr><tr name="MessageRowHeaderShowoatest"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="ShowAdditionalMessages" href="#" name="oatestMessage" onclick="ToggleMessageVisibility('oatest'); return false;">
+          Show 3 additional messages
+        </a></td></tr><tr name="MessageRowClassoatest" style="display: none"><td class="IconInfoEncoded"><a name="oatestMessage" /></td><td class="messageCell"><strong>oatest\oatest\oatest.vcproj:
+        </strong><span>Converting project file 'G:\GameDevelopment\XRayEngine\InnerRaysEngine\InnerRaysEngine\SDK\sources\OpenAutomate\oatest\oatest\oatest.vcproj'.</span></td></tr><tr name="MessageRowClassoatest" style="display: none"><td class="IconInfoEncoded"><a name="oatestMessage" /></td><td class="messageCell"><strong>oatest\oatest\oatest.vcproj:
+        </strong><span>Web deployment to the local IIS server is no longer supported. The Web Deployment build tool has been removed from your project settings.</span></td></tr><tr name="MessageRowClassoatest" style="display: none"><td class="IconInfoEncoded"><a name="oatestMessage" /></td><td class="messageCell"><strong>oatest\oatest\oatest.vcproj:
+        </strong><span>Done converting to new project file 'G:\GameDevelopment\XRayEngine\InnerRaysEngine\InnerRaysEngine\SDK\sources\OpenAutomate\oatest\oatest\oatest.vcxproj'.</span></td></tr><tr style="display: none" name="MessageRowHeaderHideoatest"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="HideAdditionalMessages" href="#" name="oatestMessage" onclick="ToggleMessageVisibility('oatest'); return false;">
+          Hide 3 additional messages
+        </a></td></tr></table><a name="oatestlib" /><h3>oatestlib</h3><table><tr id="oatestlibHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="WarningRowClassoatestlib"><td class="IconWarningEncoded"><a name="oatestlibWarning" /></td><td class="messageCell"><strong>oatest\oatestlib.vcproj:
+        </strong><span>This application has been updated to include settings related to the User Account Control (UAC) feature of Windows Vista. By default, when run on Windows Vista with UAC enabled, this application is marked to run with the same privileges as the process that launched it. This marking also disables the application from running with virtualization. You can change UAC related settings from the Property Pages of the project.</span></td></tr><tr name="WarningRowClassoatestlib"><td class="IconWarningEncoded"><a name="oatestlibWarning" /></td><td class="messageCell"><strong>oatest\oatestlib.vcproj:
+        </strong><span>VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.</span></td></tr><tr name="WarningRowClassoatestlib"><td class="IconWarningEncoded"><a name="oatestlibWarning" /></td><td class="messageCell"><strong>oatest\oatestlib.vcproj:
+        </strong><span>Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.</span></td></tr><tr name="WarningRowClassoatestlib"><td class="IconWarningEncoded"><a name="oatestlibWarning" /></td><td class="messageCell"><strong>oatest\oatestlib.vcproj:
+        </strong><span>Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.</span></td></tr><tr name="MessageRowHeaderShowoatestlib"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="ShowAdditionalMessages" href="#" name="oatestlibMessage" onclick="ToggleMessageVisibility('oatestlib'); return false;">
+          Show 2 additional messages
+        </a></td></tr><tr name="MessageRowClassoatestlib" style="display: none"><td class="IconInfoEncoded"><a name="oatestlibMessage" /></td><td class="messageCell"><strong>oatest\oatestlib.vcproj:
+        </strong><span>Converting project file 'G:\GameDevelopment\XRayEngine\InnerRaysEngine\InnerRaysEngine\SDK\sources\OpenAutomate\oatest\oatestlib.vcproj'.</span></td></tr><tr name="MessageRowClassoatestlib" style="display: none"><td class="IconInfoEncoded"><a name="oatestlibMessage" /></td><td class="messageCell"><strong>oatest\oatestlib.vcproj:
+        </strong><span>Done converting to new project file 'G:\GameDevelopment\XRayEngine\InnerRaysEngine\InnerRaysEngine\SDK\sources\OpenAutomate\oatest\oatestlib.vcxproj'.</span></td></tr><tr style="display: none" name="MessageRowHeaderHideoatestlib"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="HideAdditionalMessages" href="#" name="oatestlibMessage" onclick="ToggleMessageVisibility('oatestlib'); return false;">
+          Hide 2 additional messages
+        </a></td></tr></table><a name="simple_app" /><h3>simple_app</h3><table><tr id="simple_appHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="WarningRowClasssimple_app"><td class="IconWarningEncoded"><a name="simple_appWarning" /></td><td class="messageCell"><strong>examples\simple_app\simple_app.vcproj:
+        </strong><span>This application has been updated to include settings related to the User Account Control (UAC) feature of Windows Vista. By default, when run on Windows Vista with UAC enabled, this application is marked to run with the same privileges as the process that launched it. This marking also disables the application from running with virtualization. You can change UAC related settings from the Property Pages of the project.</span></td></tr><tr name="WarningRowClasssimple_app"><td class="IconWarningEncoded"><a name="simple_appWarning" /></td><td class="messageCell"><strong>examples\simple_app\simple_app.vcproj:
+        </strong><span>VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.</span></td></tr><tr name="WarningRowClasssimple_app"><td class="IconWarningEncoded"><a name="simple_appWarning" /></td><td class="messageCell"><strong>examples\simple_app\simple_app.vcproj:
+        </strong><span>Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.</span></td></tr><tr name="WarningRowClasssimple_app"><td class="IconWarningEncoded"><a name="simple_appWarning" /></td><td class="messageCell"><strong>examples\simple_app\simple_app.vcproj:
+        </strong><span>Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.</span></td></tr><tr name="MessageRowHeaderShowsimple_app"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="ShowAdditionalMessages" href="#" name="simple_appMessage" onclick="ToggleMessageVisibility('simple_app'); return false;">
+          Show 3 additional messages
+        </a></td></tr><tr name="MessageRowClasssimple_app" style="display: none"><td class="IconInfoEncoded"><a name="simple_appMessage" /></td><td class="messageCell"><strong>examples\simple_app\simple_app.vcproj:
+        </strong><span>Converting project file 'G:\GameDevelopment\XRayEngine\InnerRaysEngine\InnerRaysEngine\SDK\sources\OpenAutomate\examples\simple_app\simple_app.vcproj'.</span></td></tr><tr name="MessageRowClasssimple_app" style="display: none"><td class="IconInfoEncoded"><a name="simple_appMessage" /></td><td class="messageCell"><strong>examples\simple_app\simple_app.vcproj:
+        </strong><span>Web deployment to the local IIS server is no longer supported. The Web Deployment build tool has been removed from your project settings.</span></td></tr><tr name="MessageRowClasssimple_app" style="display: none"><td class="IconInfoEncoded"><a name="simple_appMessage" /></td><td class="messageCell"><strong>examples\simple_app\simple_app.vcproj:
+        </strong><span>Done converting to new project file 'G:\GameDevelopment\XRayEngine\InnerRaysEngine\InnerRaysEngine\SDK\sources\OpenAutomate\examples\simple_app\simple_app.vcxproj'.</span></td></tr><tr style="display: none" name="MessageRowHeaderHidesimple_app"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="HideAdditionalMessages" href="#" name="simple_appMessage" onclick="ToggleMessageVisibility('simple_app'); return false;">
+          Hide 3 additional messages
+        </a></td></tr></table><a name="simple_plugin" /><h3>simple_plugin</h3><table><tr id="simple_pluginHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="WarningRowClasssimple_plugin"><td class="IconWarningEncoded"><a name="simple_pluginWarning" /></td><td class="messageCell"><strong>examples\simple_plugin\simple_plugin.vcproj:
+        </strong><span>This application has been updated to include settings related to the User Account Control (UAC) feature of Windows Vista. By default, when run on Windows Vista with UAC enabled, this application is marked to run with the same privileges as the process that launched it. This marking also disables the application from running with virtualization. You can change UAC related settings from the Property Pages of the project.</span></td></tr><tr name="WarningRowClasssimple_plugin"><td class="IconWarningEncoded"><a name="simple_pluginWarning" /></td><td class="messageCell"><strong>examples\simple_plugin\simple_plugin.vcproj:
+        </strong><span>VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.</span></td></tr><tr name="WarningRowClasssimple_plugin"><td class="IconWarningEncoded"><a name="simple_pluginWarning" /></td><td class="messageCell"><strong>examples\simple_plugin\simple_plugin.vcproj:
+        </strong><span>Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.</span></td></tr><tr name="WarningRowClasssimple_plugin"><td class="IconWarningEncoded"><a name="simple_pluginWarning" /></td><td class="messageCell"><strong>examples\simple_plugin\simple_plugin.vcproj:
+        </strong><span>Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.</span></td></tr><tr name="MessageRowHeaderShowsimple_plugin"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="ShowAdditionalMessages" href="#" name="simple_pluginMessage" onclick="ToggleMessageVisibility('simple_plugin'); return false;">
+          Show 3 additional messages
+        </a></td></tr><tr name="MessageRowClasssimple_plugin" style="display: none"><td class="IconInfoEncoded"><a name="simple_pluginMessage" /></td><td class="messageCell"><strong>examples\simple_plugin\simple_plugin.vcproj:
+        </strong><span>Converting project file 'G:\GameDevelopment\XRayEngine\InnerRaysEngine\InnerRaysEngine\SDK\sources\OpenAutomate\examples\simple_plugin\simple_plugin.vcproj'.</span></td></tr><tr name="MessageRowClasssimple_plugin" style="display: none"><td class="IconInfoEncoded"><a name="simple_pluginMessage" /></td><td class="messageCell"><strong>examples\simple_plugin\simple_plugin.vcproj:
+        </strong><span>Web deployment to the local IIS server is no longer supported. The Web Deployment build tool has been removed from your project settings.</span></td></tr><tr name="MessageRowClasssimple_plugin" style="display: none"><td class="IconInfoEncoded"><a name="simple_pluginMessage" /></td><td class="messageCell"><strong>examples\simple_plugin\simple_plugin.vcproj:
+        </strong><span>Done converting to new project file 'G:\GameDevelopment\XRayEngine\InnerRaysEngine\InnerRaysEngine\SDK\sources\OpenAutomate\examples\simple_plugin\simple_plugin.vcxproj'.</span></td></tr><tr style="display: none" name="MessageRowHeaderHidesimple_plugin"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="HideAdditionalMessages" href="#" name="simple_pluginMessage" onclick="ToggleMessageVisibility('simple_plugin'); return false;">
+          Hide 3 additional messages
+        </a></td></tr></table><a name="Solution" /><h3 _locID="ProjectDisplayNameHeader">Solution</h3><table><tr id="SolutionHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="WarningRowClassSolution"><td class="IconWarningEncoded"><a name="SolutionWarning" /></td><td class="messageCell"><strong>OpenAutomate.sln:
+        </strong><span>Visual Studio needs to make non-functional changes to this project in order to enable the project to open in released versions of Visual Studio newer than Visual Studio 2010 SP1 without impacting project behavior.</span></td></tr><tr name="MessageRowHeaderShowSolution"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="ShowAdditionalMessages" href="#" name="SolutionMessage" onclick="ToggleMessageVisibility('Solution'); return false;">
+          Show 2 additional messages
+        </a></td></tr><tr name="MessageRowClassSolution" style="display: none"><td class="IconInfoEncoded"><a name="SolutionMessage" /></td><td class="messageCell"><strong>OpenAutomate.sln:
+        </strong><span>File successfully backed up as G:\GameDevelopment\XRayEngine\InnerRaysEngine\InnerRaysEngine\SDK\sources\OpenAutomate\Backup\OpenAutomate.sln</span></td></tr><tr name="MessageRowClassSolution" style="display: none"><td class="IconInfoEncoded"><a name="SolutionMessage" /></td><td class="messageCell"><strong>OpenAutomate.sln:
+        </strong><span>Solution migrated successfully</span></td></tr><tr style="display: none" name="MessageRowHeaderHideSolution"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="HideAdditionalMessages" href="#" name="SolutionMessage" onclick="ToggleMessageVisibility('Solution'); return false;">
+          Hide 2 additional messages
+        </a></td></tr></table><a name="oarpc" /><h3>oarpc</h3><table><tr id="oarpcHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">oarpc logged no messages.
+                  </td></tr></table><a name="plugins" /><h3>plugins</h3><table><tr id="pluginsHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">plugins logged no messages.
+                  </td></tr></table><a name="Simple examples" /><h3>Simple examples</h3><table><tr id="Simple examplesHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">Simple examples logged no messages.
+                  </td></tr></table></div></div></body></html>

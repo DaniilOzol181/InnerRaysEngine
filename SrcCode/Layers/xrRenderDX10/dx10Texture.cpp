@@ -6,10 +6,12 @@
 #pragma hdrstop
 
 #pragma warning(disable:4995)
-#include <d3dx9.h>
+//#include <d3dx9.h>
+#include <ThirdParty/DirectX/Include/d3dx9.h>
 #pragma warning(default:4995)
 
-#include <D3DX10Tex.h>
+//#include <D3DX10Tex.h>
+#include <ThirdParty/DirectX/Include/D3DX10tex.h>
 
 #include "../xrRender/dxRenderDeviceRender.h"
 

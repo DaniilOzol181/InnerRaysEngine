@@ -6,10 +6,14 @@
 #include "NET_Log.h"
 #include "../xrGame/battleye.h"
 
+
+#define DXTRACE_ERR
+
 #pragma warning(push)
 #pragma warning(disable:4995)
 #include <malloc.h>
-#include "dxerr9.h"
+//#include "dxerr9.h"
+//#include <ThirdParty/DirectX/Include/DxErr.h>
 
 //#pragma warning(pop)
 

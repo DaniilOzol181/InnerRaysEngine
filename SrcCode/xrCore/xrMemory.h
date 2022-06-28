@@ -2,6 +2,8 @@
 #define xrMemoryH
 #pragma once
 
+#include <typeinfo>
+
 #include "memory_monitor.h"
 
 #ifdef USE_MEMORY_MONITOR
@@ -87,17 +89,10 @@ extern XRCORE_API	xrMemory	Memory;
 #define CopyMemory(a,b,c)	memcpy(a,b,c)			//. CopyMemory(a,b,c)
 #define FillMemory(a,b,c)	Memory.mem_fill(a,c,b)
 
-// delete
-#ifdef __BORLANDC__
-	#include "xrMemory_subst_borland.h"
-#else
-	#include "xrMemory_subst_msvc.h"
-#endif
+#include "xrMemory_subst_msvc.h"
 
 // generic "C"-like allocations/deallocations
 #ifdef DEBUG_MEMORY_NAME
-	#include "typeinfo.h"
-
 	template <class T>
 	IC T*		xr_alloc	(u32 count)				{	return  (T*)Memory.mem_alloc(count*sizeof(T),typeid(T).name());	}
 	template <class T>

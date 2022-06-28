@@ -6,7 +6,8 @@
 #include "../../xrEngine/xrImage_Resampler.h"
 
 #ifdef	USE_DX10
-#include "d3dx10tex.h"
+//#include "d3dx10tex.h"
+#include <ThirdParty/DirectX/Include/D3DX10tex.h>
 #endif	//	USE_DX10
 
 #define	GAMESAVE_SIZE	128

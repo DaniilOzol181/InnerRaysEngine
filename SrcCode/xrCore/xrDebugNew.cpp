@@ -4,7 +4,11 @@
 #include "xrdebug.h"
 #include "os_clipboard.h"
 
-#include "dxerr9.h"
+//#include "dxerr9.h"
+//#include <ThirdParty/DirectX/Include/DxErr.h>
+
+//#pragma comment(lib, "DxErr.lib")
+
 
 #pragma warning(push)
 #pragma warning(disable:4995)
@@ -32,11 +36,6 @@ extern bool shared_str_initialized;
 #	include <exception>
 #endif // #ifndef USE_BUG_TRAP
 
-#ifndef _M_AMD64
-#	ifndef __BORLANDC__
-#		pragma comment(lib,"dxerr9.lib")
-#	endif
-#endif
 
 #include <dbghelp.h>						// MiniDump flags
 
@@ -248,7 +247,9 @@ LPCSTR xrDebug::error2string	(long code)
 
 #ifdef _M_AMD64
 #else
-	result				= DXGetErrorDescription9	(code);
+	//result				= DXGetErrorDescription9	(code);
+	//result = DXGetErrorDescription(code);
+	result = 0;
 #endif
 	if (0==result) 
 	{
@@ -682,9 +683,9 @@ LONG WINAPI UnhandledFilter	(_EXCEPTION_POINTERS *pExceptionInfo)
 //		::SetUnhandledExceptionFilter	(UnhandledFilter);	// exception handler to all "unhandled" exceptions
     }
 #else
-    typedef int		(__cdecl * _PNH)( size_t );
-    _CRTIMP int		__cdecl _set_new_mode( int );
-    _CRTIMP _PNH	__cdecl _set_new_handler( _PNH );
+	//typedef int		(__cdecl * _PNH)( size_t );
+	//_CRTIMP int		__cdecl _set_new_mode( int );
+	//_CRTIMP _PNH	__cdecl _set_new_handler( _PNH );
 
 #ifndef USE_BUG_TRAP
 	void _terminate		()
@@ -862,8 +863,8 @@ LONG WINAPI UnhandledFilter	(_EXCEPTION_POINTERS *pExceptionInfo)
 
 		_set_invalid_parameter_handler	(&invalid_parameter_handler);
 
-		_set_new_mode					(1);
-		_set_new_handler				(&out_of_memory_handler);
+		//_set_new_mode					(1);
+		//_set_new_handler				(&out_of_memory_handler);
 //		std::set_new_handler			(&std_out_of_memory_handler);
 
 		_set_purecall_handler			(&pure_call_handler);

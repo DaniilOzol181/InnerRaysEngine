@@ -7,6 +7,8 @@
 #define stdafxH
 #pragma once
 
+#define _ALLOW_RTCc_IN_STL
+
 #include "../xrCore/xrCore.h"
 
 #define ENGINE_API

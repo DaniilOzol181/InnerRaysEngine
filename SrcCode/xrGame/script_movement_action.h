@@ -11,6 +11,7 @@
 #include "script_abstract_action.h"
 #include "script_export_space.h"
 
+/*
 namespace DetailPathManager {
 	enum EDetailPathType;
 };
@@ -26,6 +27,12 @@ namespace PatrolPathManager {
 	enum EPatrolStartType;
 	enum EPatrolRouteType;
 };
+*/
+
+#include "patrol_path_manager_space.h"
+#include "detail_path_manager_space.h"
+#include "ai_monster_space.h"
+
 
 class CPatrolPath;
 class CScriptGameObject;

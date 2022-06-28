@@ -22,9 +22,7 @@ namespace transitions {
 	class action;
 }
 
-class description : 
-	private debug::make_final<description>, 
-	private boost::noncopyable, 
+class description :
 	public  detail::intrusive_base_time
 {
 public:
@@ -46,6 +44,10 @@ private:
 public:
 									description			(shared_str const &table_id);
 									~description		();
+
+	description(const description& other) = delete;
+	description& operator= (const description& other) = delete;
+
 	IC		shared_str const		&table_id			() const;
 	IC		Loopholes const			&loopholes			() const;
 	IC		TransitionGraph	const	&transitions		() const;

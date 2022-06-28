@@ -6,6 +6,8 @@
 #define stdafxH
 #pragma once
 
+#pragma comment(lib, "legacy_stdio_definitions.lib")
+
 #include "../xrCore/xrCore.h"
 
 // mmsystem.h

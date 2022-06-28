@@ -35,8 +35,7 @@ private:
 };
 
 class target_fire_no_lookout : 
-	public	target_provider,
-	private debug::make_final<target_fire_no_lookout>
+	public target_provider
 {
 private:
 	typedef target_provider inherited;
