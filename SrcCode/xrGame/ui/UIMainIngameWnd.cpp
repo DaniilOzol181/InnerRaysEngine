@@ -1,7 +1,5 @@
 #include "stdafx.h"
 
-#include <functional>
-
 #include "UIMainIngameWnd.h"
 #include "UIMessagesWindow.h"
 #include "../UIZoneMap.h"
@@ -421,7 +419,8 @@ void CUIMainIngameWnd::Update()
 		// ≈сли его нет, то берем последнее меньшее значение ()
 		if ( rit == m_Thresholds[i].rend() )
 		{
-			rit = std::find_if(m_Thresholds[i].rbegin(), m_Thresholds[i].rend(), std::bind2nd(std::less<float>(), value));
+			//rit = std::find_if(m_Thresholds[i].rbegin(), m_Thresholds[i].rend(), std::bind2nd(std::less<float>(), value));
+			rit = std::find_if(m_Thresholds[i].rbegin(), m_Thresholds[i].rend(), [&value](float a) {return a < value; });
 		}
 
 		// ћинимальное и максимальное значени€ границы
