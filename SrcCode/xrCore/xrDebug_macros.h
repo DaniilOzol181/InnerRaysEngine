@@ -76,8 +76,8 @@
 #define fixme( x )  message( __FILE__LINE__" FIXME:   " #x "\n" ) 
 
 //--------- static assertion
-template<bool>	struct CompileTimeError;
-template<>		struct CompileTimeError<true>	{};
+template<bool> struct CompileTimeError;
+template<> struct CompileTimeError<true> {};
 #define STATIC_CHECK(expr, msg) \
 { \
 	CompileTimeError<((expr) != 0)> ERROR_##msg; \

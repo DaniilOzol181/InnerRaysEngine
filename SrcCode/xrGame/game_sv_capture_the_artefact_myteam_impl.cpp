@@ -13,11 +13,11 @@ game_sv_CaptureTheArtefact::MyTeam::MyTeam()
 	artefactOwner = NULL;
 	score = 0;
 	freeArtefactTimeStart = 0;
-	activationArtefactTimeStart	= 0;
-	last_activator_id	=	0;
+	activationArtefactTimeStart = 0;
+	last_activator_id = 0;
 }
 
-game_sv_CaptureTheArtefact::MyTeam::MyTeam(const MyTeam & clone)
+game_sv_CaptureTheArtefact::MyTeam::MyTeam(const MyTeam& clone)
 {
 	indexOfTeamInList = clone.indexOfTeamInList;
 	playersCount = clone.playersCount;
@@ -31,14 +31,11 @@ game_sv_CaptureTheArtefact::MyTeam::MyTeam(const MyTeam & clone)
 	score = clone.score;
 	freeArtefactTimeStart = clone.freeArtefactTimeStart;
 	activationArtefactTimeStart = clone.activationArtefactTimeStart;
-	last_activator_id	=	clone.last_activator_id;
+	last_activator_id = clone.last_activator_id;
 }
 
-game_sv_CaptureTheArtefact::MyTeam::MyTeam(
-	TEAM_DATA_LIST::size_type indexInTeamList, 
-	u16 pCount, 
-	const shared_str & tName, 
-	const shared_str & aName)
+game_sv_CaptureTheArtefact::MyTeam::MyTeam(TEAM_DATA_LIST::size_type indexInTeamList, u16 pCount,
+	const shared_str& tName, const shared_str& aName)
 {
 	indexOfTeamInList = indexInTeamList;
 	playersCount = pCount;
@@ -54,14 +51,14 @@ game_sv_CaptureTheArtefact::MyTeam::MyTeam(
 	last_activator_id = 0;
 }
 
-void game_sv_CaptureTheArtefact::MyTeam::SetArtefactRPoint(const RPoint & rpoint)
+void game_sv_CaptureTheArtefact::MyTeam::SetArtefactRPoint(const RPoint& rpoint)
 {
 	artefactRPoint = rpoint;
 	rPointInitialized = true;
 }
 
 void game_sv_CaptureTheArtefact::MyTeam::OnPlayerAttachArtefact(
-	CSE_ActorMP * newArtefactOwner)
+	CSE_ActorMP* newArtefactOwner)
 {
 	artefactOwner = newArtefactOwner;
 	freeArtefactTimeStart = 0;
@@ -70,11 +67,10 @@ void game_sv_CaptureTheArtefact::MyTeam::OnPlayerAttachArtefact(
 }
 
 void game_sv_CaptureTheArtefact::MyTeam::OnPlayerDetachArtefact(
-	CSE_ActorMP * oldArtefactOwner)
+	CSE_ActorMP* oldArtefactOwner)
 {
 	VERIFY(oldArtefactOwner && artefactOwner);
-	VERIFY2(oldArtefactOwner == artefactOwner,
-		make_string("artefacts owners not equal: firstOwnerId = %d, secondOwnerId = %d",
+	VERIFY2(oldArtefactOwner == artefactOwner, make_string("artefacts owners not equal: firstOwnerId = %d, secondOwnerId = %d",
 		oldArtefactOwner->ID, artefactOwner->ID).c_str());
 	artefactOwner = NULL;
 	freeArtefactTimeStart = Level().timeServer();
@@ -98,26 +94,23 @@ void game_sv_CaptureTheArtefact::MyTeam::DeactivateArtefact()
 	last_activator_id = 0;
 }
 
-CSE_ActorMP * game_sv_CaptureTheArtefact::MyTeam::GetArtefactOwner() const
+CSE_ActorMP* game_sv_CaptureTheArtefact::MyTeam::GetArtefactOwner() const
 {
 	return artefactOwner;
 }
 
 // functors ---------------
-bool game_sv_CaptureTheArtefact::MinPlayersFunctor::operator()(
-	const TeamPair & left, 
-	const TeamPair & right) const
+bool game_sv_CaptureTheArtefact::MinPlayersFunctor::operator() (const TeamPair& left, const TeamPair& right) const
 {
 	if (left.second.playersCount < right.second.playersCount)
 	{
 		return true;
 	}
+
 	return false;
 }
 
-bool game_sv_CaptureTheArtefact::SearchArtefactIdFunctor::operator()(
-	const TeamPair & tr, 
-	u16 artefactId) const
+bool game_sv_CaptureTheArtefact::SearchArtefactIdFunctor::operator() (const TeamPair& tr, u16 artefactId) const
 {
 	if (tr.second.artefact)
 	{
@@ -126,12 +119,11 @@ bool game_sv_CaptureTheArtefact::SearchArtefactIdFunctor::operator()(
 			return true;
 		}
 	}
+
 	return false;
 }
 
-bool game_sv_CaptureTheArtefact::SearchOwnerIdFunctor::operator()(
-	const TeamPair & tr, 
-	u16 actorId) const
+bool game_sv_CaptureTheArtefact::SearchOwnerIdFunctor::operator() (const TeamPair& tr, u16 actorId) const
 {
 	if (tr.second.artefactOwner)
 	{
@@ -140,5 +132,6 @@ bool game_sv_CaptureTheArtefact::SearchOwnerIdFunctor::operator()(
 			return true;
 		}
 	}
+
 	return false;
 }

@@ -17,7 +17,7 @@
 
 class CSpaceRestrictionManager;
 
-class CSpaceRestriction : 
+class CSpaceRestriction :
 	public RestrictionSpace::CTimeIntrusiveBase,
 	public CSpaceRestrictionAbstract
 {

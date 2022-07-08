@@ -8,18 +8,24 @@
 
 #pragma once
 
-IC	CAI_Stalker	&CObjectHandlerPlanner::object			() const
+IC CObjectHandlerPlanner::_condition_type CObjectHandlerPlanner::uid(const u32 id0, const u32 id1) const
 {
-	VERIFY	(m_object);
-	return	(*m_object);
+	VERIFY(!((id0 << 16) & id1));
+	return ((id0 << 16) | id1);
 }
 
-IC	u32	CObjectHandlerPlanner::action_state_id			(_condition_type action_id) const
+IC CAI_Stalker& CObjectHandlerPlanner::object() const
 {
-	return				(action_id & 0xffff);
+	VERIFY(m_object);
+	return (*m_object);
 }
 
-IC	u32	CObjectHandlerPlanner::current_action_state_id	() const
+IC u32 CObjectHandlerPlanner::action_state_id(_condition_type action_id) const
 {
-	return				(action_state_id(current_action_id()));
+	return (action_id & 0xffff);
+}
+
+IC u32 CObjectHandlerPlanner::current_action_state_id() const
+{
+	return (action_state_id(current_action_id()));
 }

@@ -12,28 +12,28 @@
 
 using namespace luabind;
 
-LPCSTR profile_name_script (CSE_ALifeTraderAbstract* ta)
+LPCSTR profile_name_script(CSE_ALifeTraderAbstract* ta)
 {
 	return *ta->character_profile();
 }
 
 #pragma optimize("s",on)
-void CSE_ALifeTraderAbstract::script_register(lua_State *L)
+void CSE_ALifeTraderAbstract::script_register(lua_State* L)
 {
 	module(L)[
 		class_<CSE_ALifeTraderAbstract>
 			("cse_alife_trader_abstract")
-//			.def(		constructor<LPCSTR>())
-#ifdef XRGAME_EXPORTS
-			.def("community",		&CommunityName)
-			.def("profile_name",	&profile_name_script)
-			.def("rank",			&Rank)
-			.def("reputation",		&Reputation)
-#endif // XRGAME_EXPORTS
+			//.def(constructor<LPCSTR>())
+		#ifdef XRGAME_EXPORTS
+			.def("community", &CommunityName)
+			.def("profile_name", &profile_name_script)
+			.def("rank", &Rank)
+			.def("reputation", &Reputation)
+		#endif // XRGAME_EXPORTS
 	];
 }
 
-void CSE_ALifeTrader::script_register(lua_State *L)
+void CSE_ALifeTrader::script_register(lua_State* L)
 {
 	module(L)[
 		luabind_class_dynamic_alife2(
@@ -45,7 +45,7 @@ void CSE_ALifeTrader::script_register(lua_State *L)
 	];
 }
 
-void CSE_ALifeCustomZone::script_register(lua_State *L)
+void CSE_ALifeCustomZone::script_register(lua_State* L)
 {
 	module(L)[
 		luabind_class_dynamic_alife2(
@@ -57,7 +57,7 @@ void CSE_ALifeCustomZone::script_register(lua_State *L)
 	];
 }
 
-void CSE_ALifeAnomalousZone::script_register(lua_State *L)
+void CSE_ALifeAnomalousZone::script_register(lua_State* L)
 {
 	module(L)[
 		luabind_class_dynamic_alife1(
@@ -65,13 +65,13 @@ void CSE_ALifeAnomalousZone::script_register(lua_State *L)
 			"cse_anomalous_zone",
 			CSE_ALifeCustomZone
 		)
-#ifdef XRGAME_EXPORTS
-//.		.def("spawn_artefacts",	&CSE_ALifeAnomalousZone::spawn_artefacts)
-#endif
+		#ifdef XRGAME_EXPORTS
+			//.		.def("spawn_artefacts",	&CSE_ALifeAnomalousZone::spawn_artefacts)
+		#endif
 	];
 }
 
-void CSE_ALifeMonsterRat::script_register(lua_State *L)
+void CSE_ALifeMonsterRat::script_register(lua_State* L)
 {
 	module(L)[
 		luabind_class_monster2(

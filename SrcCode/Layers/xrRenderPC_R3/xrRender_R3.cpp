@@ -7,25 +7,22 @@
 
 #pragma comment(lib,"xrEngine.lib")
 
-BOOL APIENTRY DllMain( HANDLE hModule, 
-                       DWORD  ul_reason_for_call, 
-                       LPVOID lpReserved
-					 )
+BOOL APIENTRY DllMain(HANDLE hModule, DWORD ul_reason_for_call, LPVOID lpReserved)
 {
 	switch (ul_reason_for_call)
 	{
 	case DLL_PROCESS_ATTACH	:
 		//	Can't call CreateDXGIFactory from DllMain
 		//if (!xrRender_test_hw())	return FALSE;
-		::Render					= &RImplementation;
-		::RenderFactory				= &RenderFactoryImpl;
-		::DU						= &DUImpl;
-		//::vid_mode_token			= inited by HW;
-		UIRender					= &UIRenderImpl;
+		::Render = &RImplementation;
+		::RenderFactory = &RenderFactoryImpl;
+		::DU = &DUImpl;
+		//::vid_mode_token = inited by HW;
+		UIRender = &UIRenderImpl;
 #ifdef DEBUG
-		DRender						= &DebugRenderImpl;
+		DRender = &DebugRenderImpl;
 #endif	//	DEBUG
-		xrRender_initconsole		();
+		xrRender_initconsole();
 		break	;
 	case DLL_THREAD_ATTACH	:
 	case DLL_THREAD_DETACH	:

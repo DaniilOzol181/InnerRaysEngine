@@ -11,24 +11,24 @@
 #include <boost/noncopyable.hpp>
 #include "smart_cover.h"
 
-namespace smart_cover {
-
-class storage :
-	private boost::noncopyable 
+namespace smart_cover
 {
-public:
-	typedef xr_vector<smart_cover::description*>		Descriptions;
-	typedef cover::DescriptionPtr						DescriptionPtr;
+	class storage : private boost::noncopyable
+	{
+	public:
+		typedef xr_vector<smart_cover::description*> Descriptions;
+		typedef cover::DescriptionPtr DescriptionPtr;
 
-private:
-	Descriptions	m_descriptions;
+	private:
+		Descriptions m_descriptions;
 
-public:
-							~storage		();
-			DescriptionPtr	description		(shared_str const &table_id);
-			void			collect_garbage	();
-};
+	public:
+		~storage();
 
-} //namespace smart_cover
+		DescriptionPtr description(shared_str const& table_id);
+		void collect_garbage();
+	};
+
+} // !namespace smart_cover
 
 #endif //SMART_COVER_STORAGE_H_INCLUDED

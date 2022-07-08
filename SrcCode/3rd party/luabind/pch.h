@@ -6,10 +6,12 @@
 
 #ifdef NDEBUG
 
+/*
 namespace std {
 	void terminate();
 } // namespace std
+*/
 
-#endif // #ifdef NDEBUG
+#endif
 
-#endif // PCH_H
+#endif // !PCH_H

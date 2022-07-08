@@ -15,60 +15,72 @@
 #include "lua/library_linkage.h"
 #include "luabind/library_linkage.h"
 
-#pragma comment(lib,"ode.lib")
-#pragma comment(lib,"xrEngine.lib")
+#pragma comment(lib, "ode.lib")
+#pragma comment(lib, "xrEngine.lib")
 
-extern "C" {
-	DLL_API DLL_Pure*	__cdecl xrFactory_Create		(CLASS_ID clsid)
+
+extern "C"
+{
+	DLL_API DLL_Pure* __cdecl xrFactory_Create(CLASS_ID clsid)
 	{
-		DLL_Pure			*object = object_factory().client_object(clsid);
-#ifdef DEBUG
+		DLL_Pure* object = object_factory().client_object(clsid);
+	#ifdef DEBUG
 		if (!object)
-			return			(0);
-#endif
-		object->CLS_ID		= clsid;
-		return				(object);
+		{
+			return (0);
+		}
+	#endif
+		object->CLS_ID = clsid;
+
+		return (object);
 	}
 
-	DLL_API void		__cdecl	xrFactory_Destroy		(DLL_Pure* O)
+	DLL_API void __cdecl xrFactory_Destroy(DLL_Pure* O)
 	{
-		xr_delete			(O);
+		xr_delete(O);
 	}
 };
 
-void CCC_RegisterCommands	();
+void CCC_RegisterCommands();
 void setup_luabind_allocator();
 
 #ifdef NDEBUG
 
-namespace std {
-	void terminate			()
+/*
+namespace std
+{
+	void terminate()
 	{
-		abort				();
+		abort();
 	}
-} // namespace std
+} // !namespace std
+*/
 
 #endif // #ifdef NDEBUG
 
 BOOL APIENTRY DllMain(HANDLE hModule, u32 ul_reason_for_call, LPVOID lpReserved)
 {
-	switch (ul_reason_for_call) {
-		case DLL_PROCESS_ATTACH: {
-			// register console commands
+	switch (ul_reason_for_call)
+	{
+		case DLL_PROCESS_ATTACH:
+		{
+			// Register console commands
 			CCC_RegisterCommands();
-			// keyboard binding
-			CCC_RegisterInput	();
+			// Keyboard binding
+			CCC_RegisterInput();
 
-			setup_luabind_allocator	();
-#ifdef DEBUG
-			g_profiler			= xr_new<CProfiler>();
-#endif
+			setup_luabind_allocator();
+		#ifdef DEBUG
+			g_profiler = xr_new<CProfiler>();
+		#endif
 			break;
 		}
 
-		case DLL_PROCESS_DETACH: {
+		case DLL_PROCESS_DETACH:
+		{
 			break;
 		}
 	}
-    return								(TRUE);
+
+	return (TRUE);
 }
