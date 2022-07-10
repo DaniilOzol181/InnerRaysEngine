@@ -8,23 +8,26 @@
 
 # include <memory>
 
-namespace boost { 
-
-// get_pointer(p) extracts a ->* capable pointer from p
-
-template<class T> T * get_pointer(T * p)
+namespace boost
 {
-    return p;
-}
+	template<class T>
+	T* get_pointer(T* p)
+	{
+		return p;
+	}
 
-// get_pointer(shared_ptr<T> const & p) has been moved to shared_ptr.hpp
+	template<class T>
+	T* get_pointer(std::shared_ptr<T> const& p)
+	{
+		return p.get();
+	}
 
-template<class T> T * get_pointer(std::auto_ptr<T> const& p)
-{
-    return p.get();
-}
+	template<class T>
+	T* get_pointer(std::unique_ptr<T> const& p)
+	{
+		return p.get();
+	}
 
+} // !namespace boost
 
-} // namespace boost
-
-#endif // GET_POINTER_DWA20021219_HPP
+#endif // !GET_POINTER_DWA20021219_HPP

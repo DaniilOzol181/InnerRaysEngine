@@ -7,9 +7,9 @@
 using dx10StateUtils::operator==;
 
 template <class IDeviceState, class StateDecs>
-IDeviceState* 
+IDeviceState*
 dx10StateCache<IDeviceState, StateDecs>
-::GetState( SimulatorStates& state_code )
+::GetState(SimulatorStates& state_code)
 {
 	StateDecs		desc;
 	dx10StateUtils::ResetDescription(desc);
@@ -36,17 +36,17 @@ dx10StateCache<IDeviceState, StateDecs>
 }
 
 template <class IDeviceState, class StateDecs>
-IDeviceState* 
+IDeviceState*
 dx10StateCache<IDeviceState, StateDecs>
-::GetState( StateDecs& desc )
+::GetState(StateDecs& desc)
 {
-	IDeviceState*	pResult;
+	IDeviceState* pResult;
 
 	dx10StateUtils::ValidateState(desc);
 
 	u32 crc = dx10StateUtils::GetHash(desc);
 
-	pResult = FindState( desc, crc);
+	pResult = FindState(desc, crc);
 
 	if (!pResult)
 	{
@@ -60,35 +60,53 @@ dx10StateCache<IDeviceState, StateDecs>
 	return pResult;
 }
 
-template <class IDeviceState, class StateDecs>
-IDeviceState* 
-dx10StateCache<IDeviceState, StateDecs>
-::FindState( const StateDecs& desc, u32 StateCRC )
+template<class IDeviceState, class StateDecs>
+IDeviceState* dx10StateCache<IDeviceState, StateDecs>::FindState(const StateDecs& desc, u32 StateCRC)
 {
-	for (u32 i=0; i<m_StateArray.size(); ++i)
+	u32 res = 0xffffffff;
+
+	for (u32 i = 0; i < m_StateArray.size(); ++i)
 	{
-		if (m_StateArray[i].m_crc==StateCRC)
+		if (m_StateArray[i].m_crc == StateCRC)
 		{
-			StateDecs	descCandidate;
+			StateDecs descCandidate;
 			m_StateArray[i].m_pState->GetDesc(&descCandidate);
-			//if ( !memcmp(&descCandidate, &desc, sizeof(desc)) )
-			if (descCandidate==desc)
-				//break;
+			//if (!memcmp(&descCandidate, &desc, sizeof(desc)))
+			if (descCandidate == desc)
+			//break;
 			//	TEST
 			{
+				res = i;
 				break;
 			}
+			/*
 			else
 			{
 				VERIFY(0);
 			}
+			*/
 		}
 	}
 
-	if (i!=m_StateArray.size())
-		return m_StateArray[i].m_pState;
+	if (res != 0xffffffff)
+	{
+		return m_StateArray[res].m_pState;
+	}
 	else
+	{
 		return NULL;
+	}
+
+	/*
+	if (i != m_StateArray.size())
+	{
+		return m_StateArray[i].m_pState;
+	}
+	else
+	{
+		return NULL;
+	}
+	*/
 }
 
 #endif	//	dx10StateCacheImpl_included
